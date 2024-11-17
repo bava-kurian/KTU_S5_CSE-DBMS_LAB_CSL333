@@ -12,7 +12,8 @@ begin
 			insert into vegetarian values(i.stud_no,i.name,i.messfee*0.1,sysdate);
 		else
 			fees:=i.messfee+i.messfee*0.2;
-			insert into non_vegetarian values(i.stud_no,i.name,i.messfee*0.1,sysdate);
+			insert into non_vegetarian values(i.stud_no,i.name,i.messfee/
+*0.1,sysdate);
 		end if;
 	end loop;
 end;
